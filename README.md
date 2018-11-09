@@ -60,3 +60,22 @@
     
     
 ### Thanks install Completed    
+
+## Creating a catkin Package
+
+You have already **catkin_ws** this Workspace
+
+    $ ls
+    output 
+    catkin_ws  Desktop  Documents  Downloads  Music
+## Creating a catkin Package
+    
+    $ cd catkin_ws/src     
+    $ catkin_create_pkg beginner_tutorials std_msgs rospy roscpp
+    $ cd
+    
+## Building a catkin workspace and sourcing the setup file    
+
+    $ cd catkin_ws/
+    $ catkin_make
+    
