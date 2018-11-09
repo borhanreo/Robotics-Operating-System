@@ -75,7 +75,19 @@ You have already **catkin_ws** this Workspace
     $ cd
     
 ## Building a catkin workspace and sourcing the setup file    
-
+    
+build the packages in the catkin workspace
+    
     $ cd catkin_ws/
     $ catkin_make
+    
+add the workspace to your ROS environment you need to source the generated setup file    
+
+    $ . ~/catkin_ws/devel/setup.bash
+    
+    
+    
+**Reference**
+
+[Goto](http://wiki.ros.org/ROS/Tutorials/CreatingPackage) 
     
