@@ -36,6 +36,7 @@
     
                
     $ rostopic list
+    
     Output
     /battery_state
     /cmd_vel
