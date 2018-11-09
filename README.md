@@ -26,3 +26,36 @@
 - **It will takes some minutes
 
 ## Start ROS operating system
+- Insert SDcard into Raspberry pi
+- Power up
+- Psername: **ubuntu**
+- Password: **ubuntu**
+## Test ROS
+- Press **Ctrl+Alt+T** for open terminal
+- **Open terminal** 
+    
+               
+    $ rostopic list
+    Output
+    /battery_state
+    /cmd_vel
+    /diagnostics
+    /joint_states
+    /joy
+    /left_error
+    /motor_node/parameter_descriptions
+    /motor_node/parameter_updates
+    /right_error
+    /rosout
+    /rosout_agg
+    /statistics
+    /tf
+    /tf2_web_republisher/cancel
+    /tf2_web_republisher/feedback
+    /tf2_web_republisher/goal
+    /tf2_web_republisher/result
+    /tf2_web_republisher/status
+    /tf_static
+    
+    
+### Thanks install Completed    
