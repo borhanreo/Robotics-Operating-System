@@ -218,7 +218,7 @@ http://wiki.ros.org/ROS/Tutorials/BuildingPackages
      * /rosversion: 1.12.13
     
     NODES
- ### Goto 
+ ### Goto  
  http://ubiquityrobot.local:11311/
 
 ## Using rosnode
@@ -259,5 +259,74 @@ http://wiki.ros.org/ROS/Tutorials/BuildingPackages
     $ rosrun turtlesim turtlesim_node
     
 **Open a window like this**
-![alt text](turtlesim.png)        
+
+![alt text](turtlesim.png)      
+
+#### Ping rosnode  
+
+    $ rosnode list
     
+    OUTPUT
+    /joint_state_publisher
+    /joy_node
+    /motor_node
+    /myturtle
+    /robot_state_publisher
+    /rosbridge_ws/rosapi
+    /rosbridge_ws/rosbridge_websocket
+    /rosbridge_wss/rosapi
+    /rosbridge_wss/rosbridge_websocket
+    /rosout
+    /teleop_twist_joy
+    /tf2_web_republisher
+    /turtlesim
+    
+    $ rosrun turtlesim turtlesim_node
+**open another terminal**
+
+    $ rosnode ping turtlesim    
+    OUTPUT    
+    xmlrpc reply from http://ubiquityrobot.local:41327/     time=3.234863ms
+    xmlrpc reply from http://ubiquityrobot.local:41327/     time=3.123999ms
+    xmlrpc reply from http://ubiquityrobot.local:41327/     time=3.172874ms
+    xmlrpc reply from http://ubiquityrobot.local:41327/     time=3.125906ms
+    xmlrpc reply from http://ubiquityrobot.local:41327/     time=3.174067ms
+    
+#### change node name 
+    $ rosrun turtlesim turtlesim_node __name:=my_turtle    
+    
+# Understanding ROS Topics
+
+### Run roscope 
+    $ roscore
+### Run turtlesim        
+    $ rosrun turtlesim turtlesim_node
+    
+### turtle keyboard teleoperation
+**Need to another terminal**
+    
+    $ rosrun turtlesim turtle_teleop_key
+    
+**Operate LEFT RIGHT BACK FORWARD by arrow key**  
+
+
+## Using rqt_graph
+    # sudo apt-get install ros-<distro>-rqt
+    # sudo apt-get install ros-<distro>-rqt-common-plugins        
+replacing **<distro>** with the name of your ROS distribution (e.g. **indigo**, **jade**, **kinetic**, **lunar** ...)
+    
+    $ sudo apt-get install ros-kinetic-rqt
+    $ sudo apt-get install ros-kinetic-rqt-common-plugins
+    $ rosrun rqt_graph rqt_graph
+**Output like this**
+    
+![alt text](rqt_graph_turtle_key.png)    
+    
+            
+    
+##### ISSUE
+    sudo rm /var/lib/apt/lists/lock
+You may also need to delete the lock file in the cache directory
+
+    sudo rm /var/cache/apt/archives/lock
+    sudo rm /var/lib/dpkg/lock    
