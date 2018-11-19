@@ -301,7 +301,7 @@ http://wiki.ros.org/ROS/Tutorials/BuildingPackages
     $ roscore
 ### Run turtlesim        
     $ rosrun turtlesim turtlesim_node
-    
+# Click here for [Useful command](COMMAND.md) command    
 ### turtle keyboard teleoperation
 **Need to another terminal**
     
@@ -321,8 +321,42 @@ replacing **<distro>** with the name of your ROS distribution (e.g. **indigo**, 
 **Output like this**
     
 ![alt text](rqt_graph_turtle_key.png)    
+
+
+#### Using rostopic echo
+    rostopic echo /turtle1/cmd_vel
+
+It will print X, Y, Z when we will change turtle  left, right back and forward and output
     
-            
+    linear: 
+      x: 2.0
+      y: 0.0
+      z: 0.0
+    angular: 
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    ---
+    linear: 
+      x: 2.0
+      y: 0.0
+      z: 0.0
+    angular: 
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    ---
+
+# Drone Install on ROS
+### Install binary pakage 
+    $ sudo apt-get install ros-hydro-hector-quadrotor-demo
+### Build install 
+    $ mkdir hector_quadrotor_tutorial
+    $ cd hector_quadrotor_tutorial
+    $ wstool init src https://raw.github.com/tu-darmstadt-ros-pkg/hector_quadrotor/hydro-devel/tutorials.rosinstall
+    $ catkin_make
+    $ source devel/setup.bash
+                
     
 ##### ISSUE
     sudo rm /var/lib/apt/lists/lock
