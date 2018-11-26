@@ -112,6 +112,7 @@ add the workspace to your ROS environment you need to source the generated setup
 In many cases, a dependency will also have its own dependencies. For instance, rospy has other dependencies
 
     $ rospack depends1 rospy
+   
     
 **Output**
     
@@ -364,3 +365,8 @@ You may also need to delete the lock file in the cache directory
 
     sudo rm /var/cache/apt/archives/lock
     sudo rm /var/lib/dpkg/lock    
+    
+    
+# Reference
+
+http://wiki.ros.org/ROS/Tutorials    
